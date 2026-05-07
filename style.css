@@ -53,16 +53,7 @@ nav a:hover {
     background: #e65c00;
 }
 
-/* ===== LEVEL BUTTONS ===== */
-.levels {
-    margin-top: 20px;
-}
-
-.levels .btn {
-    margin: 10px;
-}
-
-/* ===== CARDS / LESSONS ===== */
+/* ===== CARDS ===== */
 .lessons {
     display: flex;
     flex-wrap: wrap;
@@ -114,7 +105,6 @@ nav a:hover {
     color: #0066cc;
 }
 
-/* ===== NOTES TEXT ===== */
 .notes-card p {
     line-height: 1.6;
     margin-bottom: 10px;
@@ -143,22 +133,14 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
-/* ===== INPUT ===== */
 .question-block input {
     width: 100%;
     padding: 10px;
     border-radius: 6px;
     border: 1px solid #ccc;
     margin-top: 5px;
-    transition: 0.2s;
 }
 
-.question-block input:focus {
-    border-color: #0066cc;
-    outline: none;
-}
-
-/* ===== BUTTON ===== */
 .question-block button {
     margin-top: 10px;
     padding: 8px 15px;
@@ -167,14 +149,12 @@ nav a:hover {
     color: white;
     border-radius: 6px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .question-block button:hover {
     background: #0056b3;
 }
 
-/* ===== RESULT TEXT ===== */
 .result {
     margin-top: 10px;
     font-weight: bold;
@@ -194,48 +174,13 @@ nav a:hover {
     color: white;
     border-radius: 6px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .nav-buttons button:hover {
     background: #1e7e34;
 }
 
-/* ===== MOBILE RESPONSIVE ===== */
-@media (max-width: 768px) {
-
-    .hero {
-        padding: 60px 15px;
-    }
-
-    .hero h2 {
-        font-size: 1.5rem;
-    }
-
-    .lessons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav {
-        margin-top: 10px;
-    }
-
-    .container {
-        padding: 15px;
-    }
-}
 /* ===== FINAL QUIZ ===== */
-
 .submit-btn {
     width: 100%;
     padding: 14px;
@@ -249,10 +194,6 @@ nav a:hover {
     font-weight: bold;
 }
 
-.submit-btn:hover {
-    background: #e65c00;
-}
-
 .score-card {
     background: white;
     margin-top: 25px;
@@ -263,39 +204,28 @@ nav a:hover {
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
 /* =========================
-   MOBILE RESPONSIVE DESIGN
+   MOBILE FIX (IMPORTANT)
 ========================= */
 @media (max-width: 768px) {
 
     body {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     header {
         flex-direction: column;
-        align-items: center;
         text-align: center;
         gap: 10px;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 8px;
-        font-size: 16px;
-    }
-
     .hero {
-        padding: 60px 20px;
+        padding: 60px 15px;
     }
 
-    .hero h1 {
-        font-size: 32px;
-        line-height: 1.3;
-    }
-
-    .hero p {
-        font-size: 18px;
+    .hero h2 {
+        font-size: 1.6rem;
     }
 
     .container {
@@ -305,44 +235,26 @@ nav a:hover {
 
     .card {
         width: 100%;
-        padding: 20px;
-    }
-
-    .card h3 {
-        font-size: 24px;
-    }
-
-    .card a {
-        font-size: 18px;
     }
 
     /* NOTES */
-    .notes-card {
-        padding: 20px;
-    }
-
     .notes-card h2 {
         font-size: 28px;
     }
 
     .notes-card p {
-        font-size: 19px;
-        line-height: 1.8;
+        font-size: 20px;
+        line-height: 1.9;
     }
 
     .example-box {
-        font-size: 18px;
-        line-height: 1.7;
+        font-size: 19px;
     }
 
     /* QUESTIONS */
-    .question-block {
-        padding: 20px;
-    }
-
     .question-block p {
         font-size: 20px;
-        line-height: 1.7;
+        line-height: 1.8;
     }
 
     .question-block input {
@@ -358,17 +270,6 @@ nav a:hover {
 
     .result {
         font-size: 18px;
-    }
-
-    /* NAV BUTTONS */
-    .nav-buttons {
-        gap: 10px;
-    }
-
-    .nav-buttons button {
-        flex: 1;
-        font-size: 18px;
-        padding: 14px;
     }
 
     /* FINAL QUIZ */
