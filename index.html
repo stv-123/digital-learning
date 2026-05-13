@@ -3,34 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>DigiLearn KE</title>
-    <link rel="stylesheet" href="style.css?v=1">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
+
 <body>
 
-<header>
-    <h1>DigiLearn KE</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="lessons.html">Lessons</a>
-    </nav>
-</header>
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="logo">
+            <h1>📘 DigiLearn KE</h1>
+        </div>
 
-<section class="hero">
-    <h2>CBC Learning Made Easy</h2>
-    <p>Study, revise, and test yourself for school success 🇰🇪</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="lessons.html">Lessons</a>
+        </nav>
+    </header>
 
-    <div class="levels">
-        <a href="lessons.html?grade=4" class="btn">Grade 4</a>
-        <a href="lessons.html?grade=5" class="btn">Grade 5</a>
-        <a href="lessons.html?grade=6" class="btn">Grade 6</a>
-    </div>
-</section>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
 
-<script src="data.js"></script>
-<script>
-    console.log(data);
-</script>
+        <div class="hero-content">
+
+            <h2>CBC Learning Made Easy 🇰🇪</h2>
+
+            <p>
+                Learn anytime, anywhere with interactive notes,
+                quizzes, and revision materials for CBC learners.
+            </p>
+
+            <div class="levels">
+
+                <a href="lessons.html?grade=4" class="btn">
+                    Grade 4
+                </a>
+
+                <a href="lessons.html?grade=5" class="btn">
+                    Grade 5
+                </a>
+
+                <a href="lessons.html?grade=6" class="btn">
+                    Grade 6
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section class="features">
+
+        <div class="feature-card">
+            <h3>📖 Easy Notes</h3>
+            <p>
+                Simple and clear CBC notes for fast understanding.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📝 Quizzes</h3>
+            <p>
+                Test yourself with interactive questions and final quizzes.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📱 Learn Anywhere</h3>
+            <p>
+                Fully mobile-friendly for phones, tablets, and computers.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>
+            © 2026 DigiLearn KE • CBC Education Platform
+        </p>
+    </footer>
+
+    <!-- ================= JS ================= -->
+    <script src="data.js?v=5"></script>
+    <script src="script.js?v=5"></script>
 
 </body>
 </html>

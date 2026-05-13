@@ -3,26 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Topic</title>
-    <link rel="stylesheet" href="style.css?v=1">
+
+    <title>Topic | DigiLearn KE</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css?v=12">
 </head>
+
 <body>
 
-<header>
-    <h1 id="topicTitle"></h1>
-</header>
+    <!-- ================= HEADER ================= -->
+    <header>
 
-<section>
-    <p id="notes"></p>
+        <div class="logo">
+            <h1>📘 DigiLearn KE</h1>
+        </div>
 
-    <h3>Quiz</h3>
-    <div id="quiz"></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="javascript:history.back()">Back</a>
+        </nav>
 
-    <p id="result"></p>
-</section>
+    </header>
 
-<script src="data.js?v=1"></script>
-<script src="script.js?v=1"></script>
+    <!-- ================= HERO ================= -->
+    <section class="hero small-hero">
+
+        <div class="hero-content">
+
+            <h2 id="topicTitle"></h2>
+
+            <p>
+                Read the notes carefully and answer the quiz questions below.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CONTENT ================= -->
+    <div class="container">
+
+        <!-- NOTES -->
+        <div id="notes"></div>
+
+        <!-- QUIZ HEADER -->
+        <div class="notes-card">
+            <h2>📝 Quiz</h2>
+            <p>
+                Try the questions below to test your understanding.
+            </p>
+        </div>
+
+        <!-- QUIZ -->
+        <div id="quiz"></div>
+
+        <!-- RESULT -->
+        <p id="result"></p>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>
+            © 2026 DigiLearn KE • CBC Education Platform
+        </p>
+    </footer>
+
+    <!-- ================= JS ================= -->
+    <script src="data.js?v=12"></script>
+    <script src="script.js?v=12"></script>
 
 </body>
 </html>

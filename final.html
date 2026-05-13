@@ -3,30 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Quiz</title>
 
-    <link rel="stylesheet" href="style.css?v=3">
+    <title>Final Quiz | DigiLearn KE</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css?v=6">
 </head>
+
 <body>
 
-<header>
-    <h1>Final Quiz</h1>
-</header>
+    <!-- ================= HEADER ================= -->
+    <header>
 
-<div class="container">
+        <div class="logo">
+            <h1>📝 DigiLearn KE</h1>
+        </div>
 
-    <div id="finalQuiz"></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="javascript:history.back()">Back</a>
+        </nav>
 
-    <button class="submit-btn" onclick="submitFinalQuiz()">
-        Submit Quiz
-    </button>
+    </header>
 
-    <div id="scoreBox"></div>
+    <!-- ================= PAGE TITLE ================= -->
+    <section class="hero small-hero">
 
-</div>
+        <div class="hero-content">
 
-<script src="data.js?v=3"></script>
-<script src="script.js?v=3"></script>
+            <h2>Final Quiz</h2>
+
+            <p>
+                Test your understanding and see how much you have learned.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= QUIZ CONTAINER ================= -->
+    <div class="container">
+
+        <div id="finalQuiz"></div>
+
+        <button class="submit-btn" onclick="submitFinalQuiz()">
+            Submit Quiz
+        </button>
+
+        <div id="scoreBox"></div>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>
+            © 2026 DigiLearn KE • CBC Education Platform
+        </p>
+    </footer>
+
+    <!-- ================= JS ================= -->
+    <script src="data.js?v=6"></script>
+    <script src="script.js?v=6"></script>
 
 </body>
 </html>
