@@ -142,6 +142,9 @@ if (subTitle && subIndex !== null && grade && subject) {
 // =====================
 // SMART VALIDATION
 // =====================
+// =====================
+// SMART VALIDATION
+// =====================
 function checkInputAnswer(index, correctAnswer, validationType) {
 
     const input = document.getElementById(`input-${index}`);
@@ -151,36 +154,58 @@ function checkInputAnswer(index, correctAnswer, validationType) {
 
     let isCorrect = false;
 
-    // Whole Numbers
+    // WHOLE NUMBER
     if (validationType === "wholeNumber") {
+
         isCorrect = /^\d+$/.test(userAnswer);
     }
 
-    // Any number
+    // ANY NUMBER
     else if (validationType === "number") {
+
         isCorrect = !isNaN(userAnswer);
     }
 
-    // Fraction
+    // FRACTION
     else if (validationType === "fraction") {
+
         isCorrect = /^\d+\/\d+$/.test(userAnswer);
     }
 
-    // Decimal
+    // DECIMAL
     else if (validationType === "decimal") {
+
         isCorrect = /^\d+\.\d+$/.test(userAnswer);
     }
 
-    // Exact match
+    // TEXT ANSWERS
     else {
-        isCorrect = userAnswer === correctAnswer.toLowerCase();
+
+        // MULTIPLE ANSWERS SUPPORT
+        // Example:
+        // answer: ["north", "east", "south"]
+
+        if (Array.isArray(correctAnswer)) {
+
+            isCorrect = correctAnswer.some(answer =>
+                userAnswer === answer.toLowerCase()
+            );
+
+        } else {
+
+            isCorrect =
+                userAnswer === String(correctAnswer).toLowerCase();
+        }
     }
 
-    // Result UI
+    // RESULT DISPLAY
     if (isCorrect) {
+
         result.innerHTML = "✅ Correct!";
         result.style.color = "green";
+
     } else {
+
         result.innerHTML = "❌ Try again.";
         result.style.color = "red";
     }
