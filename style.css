@@ -1,223 +1,438 @@
-/* ===== GLOBAL ===== */
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+/* =========================
+   GLOBAL
+========================= */
+
+* {
     margin: 0;
-    background: #f4f6f8;
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* ===== HEADER ===== */
+body {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
 header {
     background: linear-gradient(135deg, #0066cc, #004999);
     color: white;
-    padding: 15px 20px;
+    padding: 18px 25px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.logo h1,
+header h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
 }
 
 nav a {
     color: white;
-    margin-left: 15px;
     text-decoration: none;
     font-weight: 500;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    opacity: 0.8;
 }
 
-/* ===== HERO ===== */
+/* =========================
+   HERO SECTION
+========================= */
+
 .hero {
+    padding: 90px 20px;
     text-align: center;
-    padding: 80px 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: auto;
 }
 
 .hero h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #004999;
 }
 
-/* ===== BUTTON ===== */
+.hero p {
+    font-size: 20px;
+    margin-bottom: 35px;
+    color: #555;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
 .btn {
     background: #ff6600;
     color: white;
-    padding: 10px 20px;
+    padding: 14px 22px;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 10px;
     display: inline-block;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    font-weight: 600;
+    font-size: 17px;
 }
 
 .btn:hover {
     background: #e65c00;
+    transform: translateY(-2px);
 }
 
-/* ===== CARDS ===== */
+/* =========================
+   GRADE BUTTONS
+========================= */
+
+.levels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.levels .btn {
+    min-width: 130px;
+    text-align: center;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+}
+
+.feature-card {
+    background: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    color: #0066cc;
+}
+
+/* =========================
+   LESSON CARDS
+========================= */
+
 .lessons {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
+    padding: 25px;
     justify-content: center;
 }
 
 .card {
     background: white;
-    padding: 20px;
-    border-radius: 12px;
-    width: 220px;
+    padding: 25px;
+    border-radius: 15px;
+    width: 250px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
 }
 
-.card a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #0066cc;
-    font-weight: bold;
+.card h3 {
+    margin-bottom: 15px;
+    color: #004999;
 }
 
-/* ===== CONTAINER ===== */
+/* =========================
+   CARD BUTTONS
+========================= */
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #0066cc, #004999);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card a:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #0052a3, #003d80);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
 .container {
-    max-width: 750px;
+    max-width: 850px;
     margin: auto;
     padding: 20px;
 }
 
-/* ===== NOTES CARD ===== */
+/* =========================
+   NOTES CARD
+========================= */
+
 .notes-card {
     background: linear-gradient(135deg, #ffffff, #f9fbff);
-    padding: 20px;
-    border-radius: 12px;
+    padding: 25px;
+    border-radius: 15px;
     margin-bottom: 25px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     border-left: 6px solid #0066cc;
 }
 
 .notes-card h2 {
-    margin-top: 0;
+    margin-bottom: 15px;
     color: #0066cc;
 }
 
 .notes-card p {
-    line-height: 1.6;
-    margin-bottom: 10px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    font-size: 18px;
 }
 
-/* ===== EXAMPLE BOX ===== */
+/* =========================
+   EXAMPLE BOX
+========================= */
+
 .example-box {
     background: #fff3cd;
-    padding: 10px;
-    border-radius: 6px;
+    padding: 15px;
+    border-radius: 8px;
     margin-top: 10px;
     font-weight: bold;
     border-left: 4px solid #ffcc00;
+    font-size: 17px;
 }
 
-/* ===== QUESTIONS ===== */
+/* =========================
+   QUESTIONS
+========================= */
+
 .question-block {
     background: white;
-    padding: 15px;
+    padding: 20px;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
 
 .question-block p {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 18px;
 }
+
+/* =========================
+   INPUTS
+========================= */
 
 .question-block input {
     width: 100%;
-    padding: 10px;
-    border-radius: 6px;
+    padding: 14px;
+    border-radius: 8px;
     border: 1px solid #ccc;
     margin-top: 5px;
+    font-size: 16px;
 }
 
+.question-block input:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+/* =========================
+   QUESTION BUTTONS
+========================= */
+
 .question-block button {
-    margin-top: 10px;
-    padding: 8px 15px;
+    margin-top: 12px;
+    padding: 12px 18px;
     border: none;
     background: #007bff;
     color: white;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .question-block button:hover {
     background: #0056b3;
 }
 
+/* =========================
+   RESULT
+========================= */
+
 .result {
     margin-top: 10px;
     font-weight: bold;
+    font-size: 17px;
 }
 
-/* ===== NAV BUTTONS ===== */
+/* =========================
+   NAV BUTTONS
+========================= */
+
 .nav-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    gap: 15px;
+    margin-top: 25px;
 }
 
 .nav-buttons button {
-    padding: 10px 20px;
+    flex: 1;
+    padding: 14px;
     border: none;
     background: #28a745;
     color: white;
-    border-radius: 6px;
+    border-radius: 10px;
     cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .nav-buttons button:hover {
     background: #1e7e34;
 }
 
-/* ===== FINAL QUIZ ===== */
+/* =========================
+   FINAL QUIZ
+========================= */
+
 .submit-btn {
     width: 100%;
-    padding: 14px;
+    padding: 16px;
     border: none;
     background: #ff6600;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 10px;
     cursor: pointer;
     margin-top: 20px;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #e65c00;
 }
 
 .score-card {
     background: white;
     margin-top: 25px;
-    padding: 20px;
-    border-radius: 12px;
+    padding: 25px;
+    border-radius: 15px;
     text-align: center;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* =========================
-   MOBILE FIX (IMPORTANT)
+   FOOTER
 ========================= */
+
+footer {
+    background: linear-gradient(135deg, #0066cc, #004999);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   SMALL HERO
+========================= */
+
+.small-hero {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.small-hero h2 {
+    font-size: 2.2rem;
+}
+
+.small-hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
 @media (max-width: 768px) {
 
     body {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     header {
         flex-direction: column;
         text-align: center;
-        gap: 10px;
+        gap: 12px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .hero {
@@ -225,19 +440,60 @@ nav a:hover {
     }
 
     .hero h2 {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    /* GRADE BUTTONS */
+
+    .levels {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .levels .btn {
+        width: 100%;
+        padding: 16px;
+        font-size: 18px;
+    }
+
+    /* FEATURES */
+
+    .feature-card {
+        width: 100%;
+    }
+
+    /* CARDS */
+
+    .card {
+        width: 100%;
+    }
+
+    .card h3 {
+        font-size: 24px;
+    }
+
+    .card a {
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+        font-size: 18px;
+    }
+
+    /* CONTAINER */
 
     .container {
         width: 95%;
         padding: 15px;
     }
 
-    .card {
-        width: 100%;
-    }
-
     /* NOTES */
+
     .notes-card h2 {
         font-size: 28px;
     }
@@ -252,6 +508,7 @@ nav a:hover {
     }
 
     /* QUESTIONS */
+
     .question-block p {
         font-size: 20px;
         line-height: 1.8;
@@ -272,7 +529,19 @@ nav a:hover {
         font-size: 18px;
     }
 
+    /* NAV BUTTONS */
+
+    .nav-buttons {
+        flex-direction: column;
+    }
+
+    .nav-buttons button {
+        width: 100%;
+        font-size: 18px;
+    }
+
     /* FINAL QUIZ */
+
     #finalQuiz p {
         font-size: 20px;
     }
@@ -281,34 +550,8 @@ nav a:hover {
         font-size: 18px;
         padding: 14px;
     }
-}
-/* ===== FOOTER ===== */
 
-footer {
-    background: linear-gradient(135deg, #0066cc, #004999);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-}
-
-footer p {
-    margin: 0;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-}
-/* ===== SMALL HERO ===== */
-
-.small-hero {
-    padding: 50px 20px;
-}
-
-.small-hero h2 {
-    font-size: 2.2rem;
-}
-
-.small-hero p {
-    font-size: 18px;
-    max-width: 700px;
-    margin: auto;
+    footer p {
+        font-size: 15px;
+    }
 }
